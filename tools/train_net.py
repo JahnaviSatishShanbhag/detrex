@@ -37,6 +37,7 @@ from detectron2.utils.events import (
     TensorboardXWriter
 )
 from detectron2.checkpoint import DetectionCheckpointer
+from detectron2.data.datasets.coco import load_coco_json, register_coco_instances
 # from detrex.checkpoint import DetectionCheckpointer
 
 from detrex.utils import WandbWriter
@@ -44,6 +45,19 @@ from detrex.modeling import ema
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
 
+def register_custom_datasets():
+    # doclaynet dataset
+    DATASET_ROOT = "/kaggle/input/doclaynet/"
+    ANN_ROOT = os.path.join(DATASET_ROOT, "COCO")
+    TRAIN_PATH = os.path.join(DATASET_ROOT, "PNG")
+    VAL_PATH = os.path.join(DATASET_ROOT, "PNG")
+    TEST_PATH = os.path.join(DATASET_ROOT, "PNG")
+    TRAIN_JSON = os.path.join(ANN_ROOT, "train.json")
+    VAL_JSON = os.path.join(ANN_ROOT, "val.json")
+    TEST_JSON = os.path.join(ANN_ROOT, "test.json")
+    register_coco_instances("doclaynet_train", {}, TRAIN_JSON, TRAIN_PATH)
+    register_coco_instances("doclaynet_val", {}, VAL_JSON, VAL_PATH)
+    register_coco_instances("doclaynet_test", {}, TEST_JSON, TEST_PATH)
 
 class Trainer(SimpleTrainer):
     """
@@ -303,6 +317,7 @@ def main(args):
 
 
 if __name__ == "__main__":
+    register_custom_datasets()
     args = default_argument_parser().parse_args()
     launch(
         main,
