@@ -209,7 +209,7 @@ def parse_requirements(fname="requirements.txt", with_version=True):
 if __name__ == "__main__":
     print(f"Building wheel {package_name}-{version}")
 
-    with open("LICENSE", "r", encoding="utf-8") as f:
+    with open("./LICENSE", "r", encoding="utf-8") as f:
         license = f.read()
 
     write_version_file()
@@ -218,7 +218,7 @@ if __name__ == "__main__":
         name="detrex",
         version="0.2.1",
         author="International Digital Economy Academy",
-        url="https://github.com/rentainhe/detrex",
+        url="https://github.com/JahnaviSatishShanbhag/detrex",
         description="IDEA open source toolbox for transformer-based instance recognition tasks",
         license=license,
         install_requires=parse_requirements("requirements.txt"),
