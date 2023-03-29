@@ -8,6 +8,36 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
   <img src="./assets/dino_arch.png"/>
 </div><br/>
 
+## DINO with modified training engine
+We've provide a hacked [train_net.py](./train_net.py) which aligns the optimizer params with Deformable-DETR that can achieve a better result on DINO models.
+
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">Backbone</th>
+<th valign="bottom">Pretrain</th>
+<th valign="bottom">Epochs</th>
+<th valign="bottom">Denoising Queries</th>
+<th valign="bottom">box<br/>AP</th>
+<th valign="bottom">download</th>
+<!-- TABLE BODY -->
+<!-- ROW: dino_r50_4scale_12ep -->
+ <tr><td align="left"><a href="configs/dino_r50_4scale_12ep.py">DINO-R50-4scale (hacked trainer)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">12</td>
+<td align="center">100</td>
+<td align="center">49.4</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.4.0/dino_r50_4scale_12ep_hacked_trainer.pth">model</a></td>
+</tr>
+</tbody></table>
+
+- Training model with hacked trainer
+```python
+python projects/dino/train_net.py --config-file /path/to/config.py --num-gpus 8
+```
+
 ## Main Results with Pretrained Models
 
 **Pretrained DINO with ResNet Backbone**
@@ -24,7 +54,7 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
 <th valign="bottom">download</th>
 <!-- TABLE BODY -->
 <!-- ROW: dino_r50_4scale_12ep -->
- <tr><td align="left"><a href="configs/dino_r50_4cale_12ep.py">DINO-R50-4scale</a></td>
+ <tr><td align="left"><a href="configs/dino_r50_4scale_12ep.py">DINO-R50-4scale</a></td>
 <td align="center">R-50</td>
 <td align="center">IN1k</td>
 <td align="center">12</td>
@@ -67,7 +97,7 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/dino_r50_4scale_12ep_300dn.pth">model</a></td>
 </tr>
 <!-- ROW: dino_r50_4scale_24ep -->
- <tr><td align="left"><a href="configs/dino_r50_4cale_24ep.py">DINO-R50-4scale</a></td>
+ <tr><td align="left"><a href="configs/dino_r50_4scale_24ep.py">DINO-R50-4scale</a></td>
 <td align="center">R-50</td>
 <td align="center">IN1k</td>
 <td align="center">24</td>
@@ -76,7 +106,7 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.1.1/dino_r50_4scale_24ep.pth">model</a></td>
 </tr>
 <!-- ROW: dino_r101_4scale_12ep -->
- <tr><td align="left"><a href="configs/dino_r101_4cale_12ep.py">DINO-R101-4scale</a></td>
+ <tr><td align="left"><a href="configs/dino_r101_4scale_12ep.py">DINO-R101-4scale</a></td>
 <td align="center">R-101</td>
 <td align="center">IN1k</td>
 <td align="center">12</td>
@@ -95,8 +125,8 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
 <th valign="bottom">Denoising Queries</th>
 <th valign="bottom">box<br/>AP</th>
 <th valign="bottom">download</th>
-<!-- ROW: dino_swin_tiny_4cale_12ep -->
- <tr><td align="left"><a href="configs/dino_swin_tiny_4cale_12ep.py">DINO-Swin-T-224-4scale</a></td>
+<!-- ROW: dino_swin_tiny_4scale_12ep -->
+ <tr><td align="left"><a href="configs/dino_swin_tiny_4scale_12ep.py">DINO-Swin-T-224-4scale</a></td>
 <td align="center">Swin-Tiny-224</td>
 <td align="center">IN1k</td>
 <td align="center">12</td>
@@ -104,8 +134,8 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
 <td align="center">51.3</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.1.1/dino_swin_tiny_224_4scale_12ep.pth">model</a></td>
 </tr>
-<!-- ROW: dino_swin_tiny_4cale_12ep -->
- <tr><td align="left"><a href="configs/dino_swin_tiny_4cale_12ep.py">DINO-Swin-T-224-4scale</a></td>
+<!-- ROW: dino_swin_tiny_4scale_12ep -->
+ <tr><td align="left"><a href="configs/dino_swin_tiny_4scale_12ep.py">DINO-Swin-T-224-4scale</a></td>
 <td align="center">Swin-Tiny-224</td>
 <td align="center">IN22k to IN1k</td>
 <td align="center">12</td>
@@ -113,7 +143,7 @@ Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel M. Ni, Heun
 <td align="center">52.5</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.1.1/dino_swin_tiny_224_22kto1k_finetune_4scale_12ep.pth">model</a></td>
 </tr>
-<!-- ROW: dino_swin_small_4cale_12ep -->
+<!-- ROW: dino_swin_small_4scale_12ep -->
  <tr><td align="left"><a href="configs/dino_swin_small_224_4scale_12ep.py">DINO-Swin-S-224-4scale</a></td>
 <td align="center">Swin-Small-224</td>
 <td align="center">IN1k</td>

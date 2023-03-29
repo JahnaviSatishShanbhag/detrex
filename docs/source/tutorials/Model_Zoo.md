@@ -7,7 +7,7 @@
 
 
 ## COCO Object Detection Baselines
-Here we provides our pretrained baselines with **detrex**. And more pretrained weights will be released in the future version. We also provide our converted pretrained for the users which will be marked as `(converted)`.
+Here we provides our pretrained baselines with **detrex**. And more pretrained weights will be released in the future version. We also provide our converted pretrained weights for the users which will be marked as `(converted)`.
 
 ### DETR
 <table class="docutils"><tbody>
@@ -80,6 +80,56 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 </tr>
 </tbody></table>
 
+
+### Anchor-DETR
+<table class="docutils"><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">Backbone</th>
+<th valign="bottom">Pretrain</th>
+<th valign="bottom">Epochs</th>
+<th valign="bottom">box<br/>AP</th>
+<th valign="bottom">download</th>
+<!-- TABLE BODY -->
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/anchor_detr/configs/anchor_detr_r50_50ep.py">Anchor-DETR-R50 </a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">41.9</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/anchor_detr_r50_50ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/anchor_detr/configs/anchor_detr_r50_50ep.py">Anchor-DETR-R50 (converted)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">42.2</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_anchor_detr_r50_50ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/anchor_detr/configs/detr_r50_dc5_300ep.py">Anchor-DETR-R50-DC5 (converted)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">44.2</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_anchor_detr_r50_dc5_50ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/anchor_detr/configs/detr_r101_300ep.py">Anchor-DETR-R101 (converted)</a></td>
+<td align="center">R-101</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">43.5</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_anchor_detr_r101_50ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/anchor_detr/configs/detr_r101_dc5_300ep.py">Anchor-DETR-R101-DC5 (converted)</a></td>
+<td align="center">R-101</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">45.1</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_anchor_detr_r101_dc5_50ep.pth">model</a></td>
+</tr>
+</tbody></table>
+
+
 ### Conditional-DETR
 <table class="docutils"><tbody>
 <!-- START TABLE -->
@@ -98,6 +148,28 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">50</td>
 <td align="center">41.6</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.1.0/conditional_detr_r50_50ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/conditional_detr/configs/conditional_detr_r50_dc5_50ep.py">Conditional-DETR-R50-DC5 (converted)</a></td>
+<td align="center">R-50-DC5</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">43.8</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_conditional_detr_r50_dc5.pth">model</a></td>
+</tr>
+<!-- ROW: conditional_detr_r101_50ep -->
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/conditional_detr/configs/conditional_detr_r101_50ep.py">Conditional-DETR-R101 (converted)</a></td>
+<td align="center">R-101</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">43.0</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.1.0/converted_conditional_detr_r101_50ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/conditional_detr/configs/conditional_detr_r101_dc5_50ep.py">Conditional-DETR-R101-DC5 (converted)</a></td>
+<td align="center">R-101-DC5</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">45.1</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_conditional_detr_r101_dc5.pth">model</a></td>
 </tr>
 </tbody></table>
 
@@ -196,6 +268,13 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">44.7</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.1.0/dn_detr_r50_50ep.pth"> model </a></td>
 </tr>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/dn_detr/configs/dn_detr_r50_dc5_50ep.py"> DN-DETR-R50-DC5 (converted) </a> </td>
+<td align="center">R50</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">46.3</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_dn_detr_r50_dc5.pth"> model </a></td>
+</tr>
 </tbody></table>
 
 ### DINO
@@ -218,6 +297,14 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">100</td>
 <td align="center">49.2</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/dino_r50_4scale_12ep_49_2AP.pth"> model </a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/dino/configs/dino_r50_4scale_12ep.py">DINO-R50-4scale (hacked trainer)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">12</td>
+<td align="center">100</td>
+<td align="center">49.4</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.4.0/dino_r50_4scale_12ep_hacked_trainer.pth">model</a></td>
 </tr>
  <tr><td align="left">DINO-R50-4scale <b> with EMA</b></td>
 <td align="center">R-50</td>
@@ -441,7 +528,15 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <th valign="bottom">box<br/>AP</th>
 <th valign="bottom">Download</th>
 <!-- TABLE BODY -->
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_r50_two_stage_12ep.py"> H-Deformable-DETR-R50 + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_r50_two_stage_12ep.py"> H-Deformable-DETR-R50 + tricks (detrex) </a> </td>
+<td align="center">R50</td>
+<td align="center">IN1k</td>
+<td align="center">300</td>
+<td align="center">12</td>
+<td align="center">49.1</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.4.0/h_deformable_detr_r50_two_stage_12ep_modified_train_net.pth"> model </a></td>
+</tr>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_r50_two_stage_12ep.py"> H-Deformable-DETR-R50 + tricks (converted) </a> </td>
 <td align="center">R50</td>
 <td align="center">IN1k</td>
 <td align="center">300</td>
@@ -449,7 +544,7 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">48.9</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/r50_hybrid_branch_lambda1_group6_t1500_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_12eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_r50_two_stage_36ep.py"> H-Deformable-DETR-R50 + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_r50_two_stage_36ep.py"> H-Deformable-DETR-R50 + tricks (converted) </a> </td>
 <td align="center">R50</td>
 <td align="center">IN1k</td>
 <td align="center">300</td>
@@ -457,7 +552,7 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">50.3</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/r50_hybrid_branch_lambda1_group6_t1500_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_36eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_tiny_two_stage_12ep.py"> H-Deformable-DETR-Swin-T + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_tiny_two_stage_12ep.py"> H-Deformable-DETR-Swin-T + tricks (converted) </a> </td>
 <td align="center">Swin-Tiny</td>
 <td align="center">IN1k</td>
 <td align="center">300</td>
@@ -465,7 +560,7 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">50.6</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/swin_tiny_hybrid_branch_lambda1_group6_t1500_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_12eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_tiny_two_stage_36ep.py"> H-Deformable-DETR-Swin-T + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_tiny_two_stage_36ep.py"> H-Deformable-DETR-Swin-T + tricks (converted) </a> </td>
 <td align="center">Swin-Tiny</td>
 <td align="center">IN1k</td>
 <td align="center">300</td>
@@ -473,7 +568,7 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">53.5</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/swin_tiny_hybrid_branch_lambda1_group6_t1500_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_36eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_12ep.py"> H-Deformable-DETR-Swin-L + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_12ep.py"> H-Deformable-DETR-Swin-L + tricks (converted) </a> </td>
 <td align="center">Swin-Large</td>
 <td align="center">IN22k</td>
 <td align="center">300</td>
@@ -481,7 +576,7 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">56.2</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/swin_large_hybrid_branch_lambda1_group6_t1500_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_12eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_36ep.py"> H-Deformable-DETR-Swin-L + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_36ep.py"> H-Deformable-DETR-Swin-L + tricks (converted) </a> </td>
 <td align="center">Swin-Large</td>
 <td align="center">IN22k</td>
 <td align="center">300</td>
@@ -489,7 +584,7 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">57.5</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/drop_path0.5_swin_large_hybrid_branch_lambda1_group6_t1500_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_36eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_12ep_900queries.py"> H-Deformable-DETR-Swin-L + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_12ep_900queries.py"> H-Deformable-DETR-Swin-L + tricks (converted) </a> </td>
 <td align="center">Swin-Large</td>
 <td align="center">IN22k</td>
 <td align="center">900</td>
@@ -497,12 +592,68 @@ Here we provides our pretrained baselines with **detrex**. And more pretrained w
 <td align="center">56.4</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/swin_large_hybrid_branch_lambda1_group6_t1500_n900_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_12eps.pth"> model </a></td>
 </tr>
- <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_36ep_900queries.py"> H-Deformable-DETR-Swin-L + tricks </a> </td>
+ <tr><td align="left"> <a href="https://github.com/IDEA-Research/detrex/blob/main/projects/h_deformable_detr/configs/h_deformable_detr_swin_large_two_stage_36ep_900queries.py"> H-Deformable-DETR-Swin-L + tricks (converted) </a> </td>
 <td align="center">Swin-Large</td>
 <td align="center">IN22k</td>
 <td align="center">300</td>
 <td align="center">36</td>
 <td align="center">57.5</td>
 <td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.2.0/drop_path0.5_swin_large_hybrid_branch_lambda1_group6_t1500_n900_dp0_mqs_lft_deformable_detr_plus_iterative_bbox_refinement_plus_plus_two_stage_36eps.pth"> model </a></td>
+</tr>
+</tbody></table>
+
+
+### DETA
+<table class="docutils"><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">Backbone</th>
+<th valign="bottom">Pretrained</th>
+<th valign="bottom">Epochs</th>
+<th valign="bottom">box<br/>AP</th>
+<th valign="bottom">Download</th>
+<!-- TABLE BODY -->
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/deta/configs/improved_deformable_detr_baseline_50ep.py">Improved-Deformable-DETR-R50 (converted)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">50</td>
+<td align="center">49.8</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_deta_improved_deformable_baseline.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/deta/configs/deta_r50_5scale_12ep_bs8.py">DETA-R50-5scale (bs=8, 180000 iterations)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">12</td>
+<td align="center">50.0</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.4.0/deta_r50_5scale_12ep_bs8.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/deta/configs/deta_r50_5scale_12ep.py">DETA-R50-5scale (with hacked train engine)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">12</td>
+<td align="center">49.9</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.4.0/deta_r50_5scale_12ep_hacked_trainer.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/deta/configs/deta_r50_5scale_no_frozen_backbone.py">DETA-R50-5scale-12ep (no frozen backbone)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">12</td>
+<td align="center">50.2</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.4.0/deta_r50_5scale_12ep_no_freeze_backbone.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/deta/configs/deta_r50_5scale_12ep.py">DETA-R50-5scale (converted)</a></td>
+<td align="center">R-50</td>
+<td align="center">IN1k</td>
+<td align="center">12</td>
+<td align="center">50.1</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_deta_r50_5scale_12ep.pth">model</a></td>
+</tr>
+ <tr><td align="left"><a href="https://github.com/IDEA-Research/detrex/blob/main/projects/deta/configs/deta_r50_5scale_12ep.py">DETA-Swin-Large-finetune (converted)</a></td>
+<td align="center">Swin-Large-384</td>
+<td align="center">Object 365</td>
+<td align="center">24</td>
+<td align="center">62.9</td>
+<td align="center"> <a href="https://github.com/IDEA-Research/detrex-storage/releases/download/v0.3.0/converted_deta_swin_o365_finetune.pth">model</a></td>
 </tr>
 </tbody></table>
